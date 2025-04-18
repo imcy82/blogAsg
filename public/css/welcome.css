@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    border-bottom: 2px solid black;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.login-btn {
+    padding: 8px 16px;
+    background-color: #f9d6d5;
+    border: 1px solid #e0b4b3;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.content {
+    padding: 30px;
+    font-size: 24px;
+}
+
+.row {
+    display: flex;
+    gap: 80px;
+}
