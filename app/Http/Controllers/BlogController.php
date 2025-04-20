@@ -144,7 +144,7 @@ class BlogController extends Controller
 
         $blog->title = $request->title;
         $blog->author = $request->author;
-        $blog->description = strip_tags($request->description);
+        $blog->description = $request->description;
         $blog->shortDescription = $request->shortDescription;
         $blog->save();
 

@@ -94,12 +94,12 @@ function CreateBlog() {
                 <div className="mb-3">
                     <label className="form-label fw-semibold">Title</label>
                     <input 
-                    {...register('title', {required:true})}
+                    {...register('title', {required:true,minLength: {value: 10,message: 'Title must be at least 10 characters'}})}
                     type="text" 
                     className={`form-control form-control-lg ${errors.title && "is-invalid"}`}
                     placeholder="Title"
                     />
-                    {errors.title && <div className="invalid-feedback d-block">Title field is required</div>}
+                    {errors.title && <div className="invalid-feedback d-block">{errors.title.message}</div>}
                 </div>
                 <div className="mb-3">
                     <label className="form-label fw-semibold">Short Description</label>

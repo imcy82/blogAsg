@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\TempImageController;
 /*
@@ -26,6 +26,12 @@ Route::post('blog',[BlogController::class, 'store']);
 Route::post('save-temp-image',[TempImageController::class, 'store']);
 Route::put('blogs/{id}',[BlogController::class, 'update']);
 Route::delete('blogs/{id}',[BlogController::class, 'destroy']);
+
+
+//comments
+Route::get('blogs/{id}/comments',[CommentController::class,'show']);
+Route::post('blogs/{id}/comments',[CommentController::class,'store']);
+Route::delete('blogs/{id}/comments/{commentId}', [CommentController::class, 'destroy']);
 /*
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('blogs', [BlogController::class, 'index']);

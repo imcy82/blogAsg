@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Http\Request;
+use App\Http\Controllers\CommentController;
 
 Route::get('/register', [RegisterController::class, 'show'])->name('register');
 Route::post('/register', [RegisterController::class, 'register']);
@@ -56,3 +57,7 @@ Route::get('/user-info', function () {
 Route::get('/blog/edit/{id}', function($id) {
     return view('updateBlog', ['id' => $id]);
 }); 
+
+//comment
+//Route::get('/blogs/{id}/comments', [CommentController::class, 'store']);
+//Route::get('/blog/{id}/comments',[CommentController::class, 'show']);

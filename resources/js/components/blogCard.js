@@ -5,7 +5,7 @@ import {toast} from 'react-toastify';
 const BlogCard = ({blog, blogs, setBlogs}) => {
 
     const showImage = (img) => {
-        return (img) ? 'http://localhost:8000/uploads/blogs/' + img : 'https://placehold.co/600x400';
+        return (img) ? 'http://localhost:8000/uploads/blogs/' + img : 'https://media.istockphoto.com/id/1138075339/vector/people-vector-illustration-flat-cartoon-character-landing-page-template.jpg?s=612x612&w=0&k=20&c=HkNt0X45z7SKMJrurRFK1fviETYwRyJaW1EjAnE6vrQ=';
     }
 
     const deleteBlog = (id) =>{

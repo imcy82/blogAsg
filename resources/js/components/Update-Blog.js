@@ -218,6 +218,7 @@ function UpdateBlog({ id }) {
                             {(!html || html.trim() === '') && (!initialHtml || initialHtml.trim() === '') && (
                                 <div className="invalid-feedback d-block">Description is required</div>
                             )}
+                            
                         </div>
                         <div className="mb-3">
                             <label className="form-label fw-semibold">Image</label>
